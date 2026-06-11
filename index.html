@@ -499,24 +499,24 @@
             const canv = document.createElement('canvas'); canv.width = 64; canv.height = 64;
             const ctx = canv.getContext('2d');
             
-            // Белое тело
-            ctx.fillStyle = '#ffffff'; ctx.fillRect(0,0,64,64); 
+            // Белое/светло-кремовое тело
+            ctx.fillStyle = '#fffdd0'; ctx.fillRect(0,0,64,64); 
             
             // Тело курицы
-            ctx.fillStyle = '#ffffff'; ctx.fillRect(15, 20, 35, 25);
+            ctx.fillStyle = '#fffdd0'; ctx.fillRect(15, 20, 35, 25);
             
-            // Красный гребешок (СЗАДИ на голове)
-            ctx.fillStyle = '#cc0000'; ctx.fillRect(32, 16, 8, 6);
-            ctx.fillStyle = '#cc0000'; ctx.fillRect(30, 20, 12, 4);
+            // Красный гребешок
+            ctx.fillStyle = '#cc0000'; ctx.fillRect(28, 10, 8, 8);
+            ctx.fillStyle = '#cc0000'; ctx.fillRect(26, 15, 12, 4);
             
-            // Бородка (wattle) (СВЕРХУ на голове)
-            ctx.fillStyle = '#cc0000'; ctx.fillRect(28, 26, 8, 4);
+            // Бородка (wattle)
+            ctx.fillStyle = '#cc0000'; ctx.fillRect(30, 32, 4, 6);
             
             // Голова
-            ctx.fillStyle = '#ffffff'; ctx.fillRect(28, 20, 8, 10);
+            ctx.fillStyle = '#fffdd0'; ctx.fillRect(28, 20, 8, 10);
             
-            // Клюв (ВПЕРЕДИ)
-            ctx.fillStyle = '#ffaa00'; ctx.fillRect(36, 24, 4, 3);
+            // Клюв
+            ctx.fillStyle = '#ffaa00'; ctx.fillRect(34, 24, 4, 3);
             
             // Глаза
             ctx.fillStyle = '#000000'; ctx.fillRect(30, 22, 1, 1);
@@ -529,11 +529,11 @@
             ctx.fillStyle = '#cd853f'; ctx.fillRect(45, 45, 3, 8);
             
             // Крылья
-            ctx.fillStyle = '#ffffff'; ctx.fillRect(8, 25, 8, 15);
-            ctx.fillStyle = '#ffffff'; ctx.fillRect(48, 25, 8, 15);
+            ctx.fillStyle = '#fffdd0'; ctx.fillRect(8, 25, 8, 15);
+            ctx.fillStyle = '#fffdd0'; ctx.fillRect(48, 25, 8, 15);
             
             // Хвост
-            ctx.fillStyle = '#ffffff'; ctx.fillRect(52, 22, 6, 8);
+            ctx.fillStyle = '#fffdd0'; ctx.fillRect(52, 22, 6, 8);
             
             const tex = new THREE.CanvasTexture(canv); tex.magFilter = tex.minFilter = THREE.NearestFilter; return tex;
         }
@@ -1423,7 +1423,7 @@
         }
 
         // Запуск
-        generateWorld(); initializeHand(); camera.position.sаt(0, 5, 5); updateUIBars(); gameLoop();
+        generateWorld(); initializeHand(); camera.position.set(0, 5, 5); updateUIBars(); gameLoop();
     </script>
 </body>
 </html>
